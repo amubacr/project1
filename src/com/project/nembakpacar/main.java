@@ -15,32 +15,29 @@ public class main {
 		System.out.println("Kamu udah tau keadaan ku dan mungkin juga udah tau gimana kondisi ku ");
 		System.out.print("Lanjut??? (yes / no) ");
 		String i = inputUser.next();
+		String j = inputUser.next();
 		
 		// Defining 3 variable
-		boolean kondisi = true;
-		int x = 0;
+		// boolean kondisi = true;
+		// int x = 0;
 		char Confirm1;
 
-		while(kondisi){
-			switch(i){
-				case "yes":
-					System.out.println("Jadi aku mau mengungkapkan perasaan ku ke kamu lewat program ini.");
-					System.out.print("Next? (y / n) ");
-					Confirm1 = inputUser.next().charAt(0);
-					if(Confirm1 == 'y'){
-						System.out.println("Jadi karena aku sangat menyukaimu, Maukah kamu berpacaran denganku?!? ");
-							System.out.println("(Jika kamu menjawab 'iya' maka program ini otomatis di hentikan dan jawaban kamu langsung masuk ke Hp / Komputer si doi. Dan sebaliknya jika kamu menjawab 'tidak' maka otomatis jawaban kamu langsung terkirim dan memberikan sebuah kata - kata / suprise jika kamu menjawab 'ya')");
-							System.out.print("(Jawaban kamu apa ya atau tidak)? ");
-					}
-					break;
-				case "no":
-					System.out.println("Ok, karena kamu menjawab 'no' maka program dihentikan");
-					kondisi = false;
-					break;	
-				default:
-					x++;
-					System.out.println("Maaf pilihan yang kamu masukan salah, silahkan coba lagi \nMengulang program ke-" + x);
+		if(i == "yes"){
+			System.out.println("Jadi aku mau mengungkapkan perasaan ku kepada kamu");
+			System.out.println("Maukah kamu jadi pacar ku?!?");
+			Confirm1 = inputUser.next().charAt(0);
+			
+			if(Confirm1 == 'y'){
+				System.out.println("Cewek: " + "Wah, SERIUS?!?");
+				System.out.println("\t Ya \n Atau \t Tidak?");
+				j = inputUser.next();
+
+				if(j == "Iya"){
+
+				}
 			}
-		}	
+		}	else{
+			System.out.println("Program Berhenti!!!");
+		}
 	}
 }
